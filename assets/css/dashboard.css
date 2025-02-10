@@ -11,13 +11,12 @@ table{
 }
 
 tr {
-    border-bottom: 2px solid #f5f9fd !important; /* Adds line between rows */
+    border-bottom: 2px solid #f5f9fd !important; 
 }
 
-/* Add padding & border to <th> and <td> */
 th, td {
     padding: 10px;
-    border-left: 1px solid #ddd; /* Adds column separation */
+    border-left: 1px solid #ddd;
 }
 
 .bgWhite{
@@ -34,7 +33,7 @@ th, td {
 /* Input Field */
 .input-container input {
     width: 100%;
-    padding: 5px 40px 5px 10px; /* Space for the icon */
+    padding: 5px 40px 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -45,7 +44,7 @@ th, td {
 /* Icon Styling */
 .input-container i {
     position: absolute;
-    right: 10px; /* Adjust for RTL */
+    right: 10px; 
     top: 50%;
     transform: translateY(-50%);
     color: #888;
