@@ -1,0 +1,55 @@
+.cards{
+    display: flex ;
+    justify-content: space-between;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    align-items: flex-start;   
+}
+
+.info{
+    text-align: end;
+}
+
+.title {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    font-weight: bold;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.change {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.increase {
+    color: #1f9254;
+
+}
+
+.decrease{
+    color: #f94343;
+}
+
+.increase  , .decrease{
+    background: #dfffe2;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.increase i ,  .decrease i{
+    font-size: 12px;
+}

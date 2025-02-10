@@ -1,0 +1,71 @@
+
+body{
+    background-color: #f5f9fd !important;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+}
+
+tr {
+    border-bottom: 2px solid #f5f9fd !important; /* Adds line between rows */
+}
+
+/* Add padding & border to <th> and <td> */
+th, td {
+    padding: 10px;
+    border-left: 1px solid #ddd; /* Adds column separation */
+}
+
+.bgWhite{
+  background-color: white;
+}
+
+
+/* Input Container */
+.input-container {
+    position: relative;
+    width: 250px;
+}
+
+/* Input Field */
+.input-container input {
+    width: 100%;
+    padding: 5px 40px 5px 10px; /* Space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    direction: rtl;
+}
+
+
+/* Icon Styling */
+.input-container i {
+    position: absolute;
+    right: 10px; /* Adjust for RTL */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+
+
+canvas {
+    background: #f9fbfc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.displayFlex{
+    display: flex;justify-content: space-between;
+}
+
+.logoutIcon{
+    color:#fa6363
+}

@@ -1,0 +1,49 @@
+/* Menu List */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+.menu img{
+    text-align: center;
+}
+
+/* Menu Items */
+.menu li {
+    padding: 12px 20px;
+    transition: background 0.3s;
+}
+
+/* Active Item */
+.menu li.active {
+    background-color: #10508d;
+    border-radius: 5px;
+}
+
+.menu li.active a {
+    color: #fff;
+}
+
+/* Menu Links */
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icons */
+.menu li i {
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.menu li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}

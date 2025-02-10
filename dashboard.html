@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Add the base CSS plus Solid + Brands styles **font-fontawesome** -->
+    <link href="assets/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="row  m-2">
+        <div class="col-10">
+            <!-- header  -->
+            <div class="m-4 displayFlex">
+                <div class="input-container">
+                    <i class="fa-solid fa-search"></i>
+                    <input placeholder="ما الذي تبحث عنه؟">
+                </div>
+                <h4>الرئيسية</h4>
+            </div>
+
+            <!-- all cards  -->
+            <div class="row m-3">
+                <div class="col-4 ">
+                    <div class="cards">
+                        <img src="assets/images/11.png" width="50px" height="50px">
+                        <div class="info">
+                            <p class="title">إجمالي التبرعات</p>
+                            <p class="amount">EGP <strong>173,000</strong></p>
+                            <div class="change">
+                                <span class="increase">
+                                    <i class="fas fa-chart-line"></i> +15%
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="cards">
+                        <img src="assets/images/22.png" width="50px" height="50px">
+                        <div class="info">
+                            <p class="title"> متبرعين الشهر الحالي</p>
+                            <p class="amount"><strong>150,000</strong></p>
+                            <div class="change">
+                                <span class="decrease">
+                                    <i class="fas fa-chart-line"></i> -3%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="cards">
+                        <img src="assets/images/33.png" width="50px" height="50px">
+                        <div class="info">
+                            <p class="title"> تبرعات الشهر الحالي</p>
+                            <p class="amount">EGP <strong>173,000</strong></p>
+                            <div class="change">
+                                <span class="increase">
+                                    <i class="fas fa-chart-line"></i> +15%
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="cards">
+                        <img src="assets/images/44.png" width="50px" height="50px">
+                        <div class="info">
+                            <p class="title"> نسبه تحقيق المستهدف</p>
+                            <p class="amount">EGP <strong>173,000</strong></p>
+                            <div class="change">
+                                <span class="increase">
+                                    <i class="fas fa-chart-line"></i> +15%
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="cards">
+                        <img src="assets/images/55.png" width="50px" height="50px">
+                        <div class="info">
+                            <p class="title"> تبرعات في انتظار المراجعة</p>
+                            <p class="amount">EGP <strong>173,000</strong></p>
+                            <div class="change">
+                                <span class="increase">
+                                    <i class="fas fa-chart-line"></i> +15%
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="cards">
+                        <img src="assets/images/66.png" width="50px" height="50px">
+                        <div class="info">
+                            <p class="title"> إجمالي التبرعات قيد المراجعه</p>
+                            <p class="amount">EGP <strong>173,000</strong></p>
+                            <div class="change">
+                                <span class="decrease">
+                                    <i class="fas fa-chart-line"></i> -15%
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-3">
+                <div class="col-md-5">
+                    <canvas id="donationsDetails" height="200"></canvas>
+                </div>
+                <div class="col-md-7">
+                    <canvas id="donationsChart" height="140"></canvas>
+                </div>
+            </div>
+
+
+            <!-- table   -->
+            <div class="m-3">
+                <div class="m-3 displayFlex" >
+                    <div class="input-container">
+                        <i class="fa-solid fa-search"></i>
+                        <input placeholder="بحث">
+                    </div>
+                    <h5>اخر عمليات التبرع</h5>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ايصال التبرع</th>
+                            <th>الحالة</th>
+                            <th>طريقه التبرع</th>
+                            <th>مبلغ التبرع</th>
+                            <th>رقم التليفون</th>
+                            <th>اسم المتبرع</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="donorTable">
+                        <!-- Donors will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- sidebar  -->
+        <div class="col-2 text-center bgWhite">
+            <ul class="menu">
+                <div class="text-center mt-4">
+                    <img src="assets/images/logo.png" width="40%" height="70px">
+                </div>
+
+                <li class="active mt-3">
+                    <a href="#"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        المتبرعين
+                        <i class="fa fa-angle-down"></i>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-users"></i> جمعيتي
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-calendar"></i> المشاريع والأنشطة</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-gift"></i> الإهداءات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-hand-holding-dollar"></i> التبرعات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-chart-bar"></i> الإحصاءات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-exchange-alt"></i> إدارة التحويلات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-cog"></i> الإعدادات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-trash"></i> السلات المتروكة</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-message"></i> المراسلات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-star"></i>تعليقات وتقييمات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-link"></i>روابط الاعلانات</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>الموقع الالكتروني</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-users"></i>المستخدمين والصلاحيات
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-right-to-bracket logoutIcon"></i> تسجيل الخروج
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="assets/js/table.js"></script>
+    <script src="assets/js/charts.js"></script>
+
+</body>
+
+</html>
